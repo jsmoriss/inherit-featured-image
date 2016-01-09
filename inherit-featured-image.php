@@ -2,7 +2,7 @@
 /*
  * Plugin Name: JSM's Inherit Parent Featured Image
  * Plugin URI: http://surniaulula.com/extend/plugins/inherit-featured-image/
- * Author: Jean-Sebastien Morisset
+ * Author: JS Morisset
  * Author URI: http://surniaulula.com/
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
