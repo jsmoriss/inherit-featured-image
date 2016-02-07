@@ -1,7 +1,7 @@
 === JSM's Inherit Parent Featured Image ===
 Plugin Name: JSM's Inherit Parent Featured Image
 Plugin Slug: inherit-featured-image
-Contributors: JS Morisset
+Contributors: jsmoriss
 Tags: inherit, parent, featured, image
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
