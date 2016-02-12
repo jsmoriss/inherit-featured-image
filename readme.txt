@@ -43,29 +43,48 @@ The plugin hooks into the 'get_post_metadata' WordPress filter, so featured imag
 
 == Frequently Asked Questions ==
 
+= Frequently Asked Questions =
+
+* None
+
+== Other Notes ==
+
+= Additional Documentation =
+
+* None
+
+== Screenshots ==
+
 == Changelog ==
 
-= Version 1.0.1 (2016/01/08) =
+= Repositories =
 
-* **New Features**
-	* *None*
-* **Improvements**
+* [GitHub](https://github.com/jsmoriss/inherit-featured-image)
+* [WordPress.org](https://wordpress.org/plugins/inherit-featured-image/developers/)
+
+= Changelog / Release Notes =
+
+**Version 1.0.1 (2016/01/08)**
+
+* *New Features*
+	* None
+* *Improvements*
 	* Updated the plugin name and assets (icons and banner).
-* **Bugfixes**
-	* *None*
-* **Developer Notes**
-	* *None*
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* None
 
-= Version 1.0 =
+**Version 1.0**
 
-* **New Features**
+* *New Features*
 	* Initial release.
-* **Improvements**
-	* *None*
-* **Bugfixes**
-	* *None*
-* **Developer Notes**
-	* *None*
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* None
 
 == Upgrade Notice ==
 
