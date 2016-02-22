@@ -75,17 +75,6 @@ The plugin hooks into the 'get_post_metadata' WordPress filter, so featured imag
 * *Developer Notes*
 	* None
 
-**Version 1.0**
-
-* *New Features*
-	* Initial release.
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* None
-
 == Upgrade Notice ==
 
 = 1.0.1 =
