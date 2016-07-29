@@ -79,5 +79,5 @@ The plugin hooks into the 'get_post_metadata' WordPress filter, so featured imag
 
 = 1.0.1 =
 
-2016/01/08 - Updated the plugin name and assets (icons and banner).
+(2016/01/08) Updated the plugin name and assets (icons and banner).
 
