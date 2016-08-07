@@ -1,10 +1,14 @@
 === JSM's Inherit Parent Featured Image ===
 Plugin Name: JSM's Inherit Parent Featured Image
 Plugin Slug: inherit-featured-image
-Contributors: jsmoriss
-Tags: inherit, parent, featured, image
+Text Domain: inherit-featured-image
+Domain Path: /languages
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
+Donate Link:
+Assets URI: https://jsmoriss.github.io/inherit-featured-image/assets/
+Tags: inherit, parent, featured, image
+Contributors: jsmoriss
 Requires At Least: 3.0
 Tested Up To: 4.6
 Stable Tag: 1.0.1
