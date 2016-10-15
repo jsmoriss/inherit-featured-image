@@ -1,14 +1,17 @@
 <?php
 /*
  * Plugin Name: JSM's Inherit Parent Featured Image
+ * Text Domain: inherit-featured-image
+ * Domain Path: /languages
  * Plugin URI: http://surniaulula.com/extend/plugins/inherit-featured-image/
+ * Assets URI: https://jsmoriss.github.io/inherit-featured-image/assets/
  * Author: JS Morisset
  * Author URI: http://surniaulula.com/
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: A WordPress plugin to inherit the featured image of the Post / Page parent, grand-parent, etc.
  * Requires At Least: 3.0
- * Tested Up To: 4.5.3
+ * Tested Up To: 4.6.1
  * Version: 1.0.1
  * 
  * This script is free software; you can redistribute it and/or modify it under
