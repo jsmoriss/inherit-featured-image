@@ -12,7 +12,7 @@
  * Description: A WordPress plugin to inherit the featured image of the Post / Page parent, grand-parent, etc.
  * Requires At Least: 3.5
  * Tested Up To: 4.6.1
- * Version: 1.0.1
+ * Version: 1.0.1-1
  * 
  * This script is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
