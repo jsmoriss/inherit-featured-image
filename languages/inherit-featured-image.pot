@@ -18,7 +18,7 @@ msgid "JSM's Inherit Parent Featured Image"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "http://surniaulula.com/extend/plugins/inherit-featured-image/"
+msgid "https://surniaulula.com/extend/plugins/inherit-featured-image/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -32,5 +32,5 @@ msgid "JS Morisset"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://surniaulula.com/"
+msgid "https://surniaulula.com/"
 msgstr ""
