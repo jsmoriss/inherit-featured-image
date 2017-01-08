@@ -67,7 +67,7 @@ The plugin hooks into the 'get_post_metadata' WordPress filter, so featured imag
 
 = Repositories =
 
-* [GitHub](https://github.com/jsmoriss/inherit-featured-image)
+* [GitHub](https://jsmoriss.github.io/inherit-featured-image/)
 * [WordPress.org](https://wordpress.org/plugins/inherit-featured-image/developers/)
 
 = Version Numbering Scheme =
