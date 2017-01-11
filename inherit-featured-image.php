@@ -11,7 +11,7 @@
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: A WordPress plugin to inherit the featured image of the Post / Page parent, grand-parent, etc.
  * Requires At Least: 3.7
- * Tested Up To: 4.7
+ * Tested Up To: 4.7.1
  * Version: 1.0.1-1
  * 
  * Version Components: {major}.{minor}.{bugfix}-{stage}{level}
