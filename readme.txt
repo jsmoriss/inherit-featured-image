@@ -10,7 +10,7 @@ Assets URI: https://jsmoriss.github.io/inherit-featured-image/assets/
 Tags: inherit, parent, featured, image
 Contributors: jsmoriss
 Requires At Least: 3.7
-Tested Up To: 4.7
+Tested Up To: 4.7.1
 Stable Tag: 1.0.1-1
 
 A WordPress plugin to inherit the featured image of the Post / Page parent, grand-parent, etc.
