@@ -9,7 +9,7 @@ Donate Link: https://www.paypal.me/jsmoriss
 Assets URI: https://jsmoriss.github.io/inherit-featured-image/assets/
 Tags: inherit, parent, featured, image
 Contributors: jsmoriss
-Requires At Least: 3.7
+Requires At Least: 3.8
 Tested Up To: 4.7.2
 Stable Tag: 1.0.1-1
 
