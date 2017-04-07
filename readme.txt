@@ -69,7 +69,7 @@ The plugin hooks into the 'get_post_metadata' WordPress filter, so featured imag
 * [GitHub](https://jsmoriss.github.io/inherit-featured-image/)
 * [WordPress.org](https://wordpress.org/plugins/inherit-featured-image/developers/)
 
-= Version Numbering Scheme =
+= Version Numbering =
 
 Version components: `{major}.{minor}.{bugfix}-{stage}{level}`
 
