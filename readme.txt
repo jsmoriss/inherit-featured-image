@@ -80,9 +80,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = Changelog / Release Notes =
 
-**Version 1.0.1-1 (2016/10/28)**
-
-Maintenance release - no changes.
+**Version 1.0.2 (2017/04/08)**
 
 * *New Features*
 	* None
@@ -91,11 +89,12 @@ Maintenance release - no changes.
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* None
+	* Maintenance release - update to version numbering scheme.
+	* Dropped the package number from the production version string.
 
 == Upgrade Notice ==
 
-= 1.0.1-1 =
+= 1.0.2 =
 
-(2016/10/28) Maintenance release - no changes.
+(2017/04/08) Maintenance release - update to version numbering scheme.
 
