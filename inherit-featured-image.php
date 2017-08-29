@@ -12,6 +12,7 @@
  * Description: A WordPress plugin to inherit the featured image of the Post / Page parent, grand-parent, etc.
  * Requires At Least: 3.7
  * Tested Up To: 4.8.1
+ * Requires PHP: 5.3
  * Version: 1.0.2
  * 
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
