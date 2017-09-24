@@ -13,7 +13,7 @@
  * Requires At Least: 3.7
  * Tested Up To: 4.8.2
  * Requires PHP: 5.3
- * Version: 1.0.2
+ * Version: 1.1.0
  * 
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -31,9 +31,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 
-	add_filter( 'get_post_metadata', array( 'InheritFeaturedImage', 'get_post_inherited' ), 10, 4 );
-
         class InheritFeaturedImage {
+
+		private static $instance;
+
+		public function __construct() {
+			add_action( 'plugins_loaded', array( __CLASS__, 'load_textdomain' ) );
+			add_filter( 'get_post_metadata', array( __CLASS__, 'get_post_inherited' ), 10, 4 );
+		}
+
+		public static function &get_instance() {
+			if ( ! isset( self::$instance ) ) {
+				self::$instance = new self;
+			}
+			return self::$instance;
+		}
+
+		public static function load_textdomain() {
+			load_plugin_textdomain( 'inherit-featured-image', false, 'inherit-featured-image/languages/' );
+		}
 
 		public static function get_post_inherited( $meta_data, $object_id, $meta_key, $single ) {
 			return self::get_inherited( 'post', $meta_data, $object_id, $meta_key, $single );
@@ -67,6 +83,8 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 			return $meta_cache;
 		}
 	}
+
+	InheritFeaturedImage::get_instance();
 }
 
 ?>
