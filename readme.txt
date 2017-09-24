@@ -17,9 +17,13 @@ A WordPress plugin to inherit the featured image of the Post / Page parent, gran
 
 == Description ==
 
-*If no featured image has been defined* for a post / page / custom post type, then the plugin assigns a featured image from the parent, grand-parent, etc.  To override the inherited featured image, simply use the 'Add Media' button and its 'Set Featured Image' feature.
+A WordPress plugin to inherit the featured image of the Post / Page parent, grand-parent, etc.
 
-The plugin hooks into the 'get_post_metadata' WordPress filter, so featured images are assigned dynamically &mdash; disable the plugin to remove the dynamically assigned featured images. The plugin also uses the WordPress `wp_cache_get()` and `update_meta_cache()` functions to integrate fully with core WordPress functionality.
+If no featured image has been defined for a post / page / custom post type, then the plugin assigns a featured image from the parent, grand-parent, etc. To override the inherited featured image, simply use the 'Add Media' button and the 'Set Featured Image' feature.
+
+The plugin hooks into the 'get_post_metadata' WordPress filter, so featured images are assigned dynamically &mdash; disable the plugin to remove the dynamically assigned featured images.
+
+The plugin also uses the WordPress `wp_cache_get()` and `update_meta_cache()` functions to fully integrate with WordPress core functionality.
 
 <blockquote>
 <p>There are no plugin settings &mdash; simply install and activate the plugin.</p>
