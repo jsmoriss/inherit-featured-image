@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires At Least: 3.7
 Tested Up To: 4.8.2
 Requires PHP: 5.3
-Stable Tag: 1.0.2
+Stable Tag: 1.1.0
 
 A WordPress plugin to inherit the featured image of the Post / Page parent, grand-parent, etc.
 
@@ -81,7 +81,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = Changelog / Release Notes =
 
-**Version 1.0.2 (2017/04/08)**
+**Version 1.1.0 (2017/09/24)**
 
 * *New Features*
 	* None
@@ -90,12 +90,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Maintenance release - update to version numbering scheme.
-	* Dropped the package number from the production version string.
+	* Added class __construct(), get_instance(), and load_textdomain() methods.
 
 == Upgrade Notice ==
 
-= 1.0.2 =
+= 1.1.0 =
 
-(2017/04/08) Maintenance release - update to version numbering scheme.
+(2017/09/24) Added class __construct(), get_instance(), and load_textdomain() methods.
 
