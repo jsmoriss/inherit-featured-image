@@ -13,11 +13,11 @@ Tested Up To: 4.8.2
 Requires PHP: 5.3
 Stable Tag: 1.1.0
 
-A WordPress plugin to inherit the featured image of the Post / Page parent, grand-parent, etc.
+A WordPress plugin to inherit the featured image of the post / page parent, grand-parent, etc.
 
 == Description ==
 
-A WordPress plugin to inherit the featured image of the Post / Page parent, grand-parent, etc.
+**A WordPress plugin to inherit the featured image of the post / page parent, grand-parent, etc.**
 
 If no featured image has been defined for a post / page / custom post type, then the plugin assigns a featured image from the parent, grand-parent, etc. To override the inherited featured image, simply use the 'Add Media' button and the 'Set Featured Image' feature.
 
