@@ -10,7 +10,7 @@ Tags: inherit, parent, featured, image
 Contributors: jsmoriss
 Requires PHP: 5.3
 Requires At Least: 3.7
-Tested Up To: 4.8.3
+Tested Up To: 4.9
 Stable Tag: 1.1.0
 
 A WordPress plugin to inherit the featured image of the post / page parent, grand-parent, etc.
