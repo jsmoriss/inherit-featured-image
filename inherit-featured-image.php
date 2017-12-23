@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name: JSM's Inherit Parent Featured Image
  * Text Domain: inherit-featured-image
