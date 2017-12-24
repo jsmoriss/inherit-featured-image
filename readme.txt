@@ -25,9 +25,7 @@ The plugin hooks into the 'get_post_metadata' WordPress filter, so featured imag
 
 The plugin also uses the WordPress `wp_cache_get()` and `update_meta_cache()` functions to fully integrate with WordPress core functionality.
 
-<blockquote>
-<p>There are no plugin settings &mdash; simply install and activate the plugin.</p>
-</blockquote>
+There are no plugin settings &mdash; simply install and activate the plugin.
 
 == Installation ==
 

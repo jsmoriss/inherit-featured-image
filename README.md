@@ -21,9 +21,7 @@
 
 <p>The plugin also uses the WordPress <code>wp_cache_get()</code> and <code>update_meta_cache()</code> functions to fully integrate with WordPress core functionality.</p>
 
-<blockquote>
 <p>There are no plugin settings &mdash; simply install and activate the plugin.</p>
-</blockquote>
 
 
 <h2>Installation</h2>
