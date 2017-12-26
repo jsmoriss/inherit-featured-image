@@ -65,9 +65,11 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 					foreach ( get_post_ancestors( $object_id ) as $parent_id ) {
 						$meta_cache = self::get_meta_cache( $parent_id, $meta_type );
 						if ( isset( $meta_cache[$meta_key] ) ) {
-							if ( $single )
+							if ( $single ) {
 								return maybe_unserialize( $meta_cache[$meta_key][0] );
-							else return array_map('maybe_unserialize', $meta_cache[$meta_key]);
+							} else {
+								return array_map('maybe_unserialize', $meta_cache[$meta_key]);
+							}
 						}
 					}
 				}
@@ -76,7 +78,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 		}
 
 		private static function get_meta_cache( $object_id, $meta_type ) {
-			$meta_cache = wp_cache_get( $object_id, $meta_type.'_meta' );
+			$meta_cache = wp_cache_get( $object_id, $meta_type . '_meta' );
 			if ( ! $meta_cache ) {
 				$meta_cache = update_meta_cache( $meta_type, array( $object_id ) );
 				$meta_cache = $meta_cache[$object_id];
