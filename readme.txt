@@ -70,7 +70,7 @@ There are no plugin settings &mdash; simply install and activate the plugin.
 <h3>Repositories</h3>
 
 * [GitHub](https://jsmoriss.github.io/inherit-featured-image/)
-* [WordPress.org](https://wordpress.org/plugins/inherit-featured-image/developers/)
+* [WordPress.org](https://plugins.trac.wordpress.org/browser/inherit-featured-image/)
 
 <h3>Version Numbering</h3>
 
