@@ -88,4 +88,3 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 
 	InheritFeaturedImage::get_instance();
 }
-
