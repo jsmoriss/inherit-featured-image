@@ -41,9 +41,11 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 		}
 
 		public static function &get_instance() {
+
 			if ( ! isset( self::$instance ) ) {
 				self::$instance = new self;
 			}
+
 			return self::$instance;
 		}
 
