@@ -53,13 +53,13 @@ There are no plugin settings &mdash; simply install and activate the plugin.
 
 == Frequently Asked Questions ==
 
-<h3>Frequently Asked Questions</h3>
+<h3 class="top">Frequently Asked Questions</h3>
 
 * None
 
 == Other Notes ==
 
-<h3>Additional Documentation</h3>
+<h3 class="top">Additional Documentation</h3>
 
 * None
 
@@ -67,7 +67,7 @@ There are no plugin settings &mdash; simply install and activate the plugin.
 
 == Changelog ==
 
-<h3>Repositories</h3>
+<h3 class="top">Repositories</h3>
 
 * [GitHub](https://jsmoriss.github.io/inherit-featured-image/)
 * [WordPress.org](https://plugins.trac.wordpress.org/browser/inherit-featured-image/)
