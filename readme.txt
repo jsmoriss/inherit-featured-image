@@ -67,12 +67,7 @@ There are no plugin settings &mdash; simply install and activate the plugin.
 
 == Changelog ==
 
-<h3 class="top">Repositories</h3>
-
-* [GitHub](https://jsmoriss.github.io/inherit-featured-image/)
-* [WordPress.org](https://plugins.trac.wordpress.org/browser/inherit-featured-image/)
-
-<h3>Version Numbering</h3>
+<h3 class="top">Version Numbering</h3>
 
 Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
@@ -80,6 +75,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * {minor} = New functionality was added or improved in a backwards-compatible manner.
 * {bugfix} = Backwards-compatible bug fixes or small improvements.
 * {stage}.{level} = Pre-production release: dev < a (alpha) < b (beta) < rc (release candidate).
+
+<h3>Repositories</h3>
+
+* [GitHub](https://jsmoriss.github.io/inherit-featured-image/)
+* [WordPress.org](https://plugins.trac.wordpress.org/browser/inherit-featured-image/)
 
 <h3>Changelog / Release Notes</h3>
 
