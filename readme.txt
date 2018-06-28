@@ -13,11 +13,9 @@ Requires At Least: 3.8
 Tested Up To: 4.9.6
 Stable Tag: 1.1.1
 
-A WordPress plugin to inherit the featured image of the post / page parent, grand-parent, etc.
+Inherit the featured image from the Post, Page, or Custom Post Type parent, grand-parent, etc.
 
 == Description ==
-
-**A WordPress plugin to inherit the featured image of the post / page parent, grand-parent, etc.**
 
 If a featured image has not been selected for a Post, Page, or Custom Post Type, then the plugin returns the featured image from the parent, grand-parent, etc.
 
