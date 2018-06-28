@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 5.4
 Requires At Least: 3.8
 Tested Up To: 4.9.6
-Stable Tag: 1.1.0
+Stable Tag: 1.1.1
 
 A WordPress plugin to inherit the featured image of the post / page parent, grand-parent, etc.
 
@@ -19,11 +19,13 @@ A WordPress plugin to inherit the featured image of the post / page parent, gran
 
 **A WordPress plugin to inherit the featured image of the post / page parent, grand-parent, etc.**
 
-If no featured image has been defined for a post / page / custom post type, then the plugin assigns a featured image from the parent, grand-parent, etc. To override the inherited featured image, simply use the 'Add Media' button and the 'Set Featured Image' feature.
+If a featured image has not been selected for a Post, Page, or Custom Post Type, then the plugin returns the featured image from the parent, grand-parent, etc.
 
-The plugin hooks into the 'get_post_metadata' WordPress filter, so featured images are assigned dynamically &mdash; disable the plugin to remove the dynamically assigned featured images.
+To override the inherited featured image, and manually select a different featured image, use the 'Add Media' button and the 'Set Featured Image' option.
 
-The plugin also uses the WordPress `wp_cache_get()` and `update_meta_cache()` functions to fully integrate with WordPress core functionality.
+The plugin hooks the WordPress 'get_post_metadata' filter, so featured images are assigned dynamically &mdash; no permanent changes are made &mdash; simply disable the plugin to disable inherited featured images.
+
+The plugin also uses the WordPress `wp_cache_get()` and `update_meta_cache()` functions for maximum performance and to fully integrate with WordPress core functionality.
 
 There are no plugin settings &mdash; simply install and activate the plugin.
 
@@ -83,7 +85,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.1.0 (2017/09/24)**
+**Version 1.1.1 (2018/06/28)**
 
 * *New Features*
 	* None
@@ -92,11 +94,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Added class __construct(), get_instance(), and load_textdomain() methods.
+	* Maintenance release - minor code-reformatting and update to the readme.
 
 == Upgrade Notice ==
 
-= 1.1.0 =
+= 1.1.1 =
 
-(2017/09/24) Added class __construct(), get_instance(), and load_textdomain() methods.
+(2018/06/28) Maintenance release - minor code-reformatting and update to the readme.
 
