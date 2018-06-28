@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the JSM's Inherit Parent Featured Image package.
 msgid ""
 msgstr ""
-"Project-Id-Version: JSM's Inherit Parent Featured Image 1.1.0\n"
+"Project-Id-Version: JSM's Inherit Parent Featured Image 1.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/inherit-featured-"
 "image\n"
 "POT-Creation-Date: 2018-MO-DA HO:MI+ZONE\n"
