@@ -23,7 +23,7 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"A WordPress plugin to inherit the featured image of the Post / Page parent, "
+"Inherit the featured image from the Post, Page, or Custom Post Type parent, "
 "grand-parent, etc."
 msgstr ""
 
