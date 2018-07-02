@@ -53,16 +53,6 @@ There are no plugin settings &mdash; simply install and activate the plugin.
 
 == Frequently Asked Questions ==
 
-<h3 class="top">Frequently Asked Questions</h3>
-
-* None
-
-== Other Notes ==
-
-<h3 class="top">Additional Documentation</h3>
-
-* None
-
 == Screenshots ==
 
 == Changelog ==
