@@ -12,7 +12,7 @@
  * Description: Inherit the featured image from the Post, Page, or Custom Post Type parent, grand-parent, etc.
  * Requires PHP: 5.4
  * Requires At Least: 3.8
- * Tested Up To: 4.9.6
+ * Tested Up To: 4.9.7
  * Version: 1.1.1
  * 
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
@@ -39,7 +39,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 
 			add_action( 'plugins_loaded', array( __CLASS__, 'load_textdomain' ) );
 
-			add_filter( 'get_post_metadata', array( __CLASS__, 'get_post_inherited' ), 10, 4 );
+			add_filter( 'get_post_metadata', array( __CLASS__, 'get_meta_thumbnail_id' ), 10, 4 );
 		}
 
 		public static function &get_instance() {
@@ -55,38 +55,36 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 			load_plugin_textdomain( 'inherit-featured-image', false, 'inherit-featured-image/languages/' );
 		}
 
-		/**
-		 * Hooked to the 'get_post_metadata' filter.
-		 */
-		public static function get_post_inherited( $meta_data, $object_id, $meta_key, $single ) {
-			return self::get_inherited( 'post', $meta_data, $object_id, $meta_key, $single );
-		}
+		public static function get_meta_thumbnail_id( $meta_data, $object_id, $meta_key, $single ) {
 
-		private static function get_inherited( $meta_type, $meta_data, $object_id, $meta_key, $single ) {
+			/**
+			 * We're only interested in the post (object) featured image.
+			 */
+			if ( $meta_key !== '_thumbnail_id' ) {
+				return $meta_data;
+			}
 
-			if ( isset( $meta_key ) && $meta_key === '_thumbnail_id' ) {
+			$meta_cache = self::get_meta_cache( $object_id, 'post' );
 
-				$meta_cache = self::get_meta_cache( $object_id, $meta_type );
+			/**
+			 * If the post (object) meta already has a featured image, then no need to check the parents.
+			 */
+			if ( ! empty( $meta_cache[$meta_key] ) ) {
+				return $meta_data;
+			}
 
-				/**
-				 * If there's no featured image, check the parents.
-				 */
-				if ( ! isset( $meta_cache[$meta_key] ) ) {
+			/**
+			 * Return the first parent featured image found. Start with the parent, then the grand-parent, etc.
+			 */
+			foreach ( get_post_ancestors( $object_id ) as $parent_id ) {
 
-					/**
-					 * Check each parent, return immediately if a featured image is found.
-					 */
-					foreach ( get_post_ancestors( $object_id ) as $parent_id ) {
+				$meta_cache = self::get_meta_cache( $parent_id, 'post' );
 
-						$meta_cache = self::get_meta_cache( $parent_id, $meta_type );
-
-						if ( isset( $meta_cache[$meta_key] ) ) {
-							if ( $single ) {
-								return maybe_unserialize( $meta_cache[$meta_key][0] );
-							} else {
-								return array_map( 'maybe_unserialize', $meta_cache[$meta_key] );
-							}
-						}
+				if ( ! empty( $meta_cache[$meta_key] ) ) {
+					if ( $single ) {
+						return maybe_unserialize( $meta_cache[$meta_key][0] );
+					} else {
+						return array_map( 'maybe_unserialize', $meta_cache[$meta_key] );
 					}
 				}
 			}
