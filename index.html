@@ -32,7 +32,7 @@
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM&#039;s Inherit Parent Featured Image</td></tr>
-<tr><th align="right" valign="top" nowrap>Summary</th><td>Inherit the featured image from the Post, Page, or Custom Post Type parent, grand-parent, etc.</td></tr>
+<tr><th align="right" valign="top" nowrap>Summary</th><td>Inherit the featured image from the Post, Page, or Custom Post Type parent, grand-parent, great-grand-parent, etc.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.1.1</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.8</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 4.9.7</td></tr>
@@ -43,15 +43,15 @@
 
 <h2>Description</h2>
 
-<p>If a featured image has not been selected for a Post, Page, or Custom Post Type, then the plugin returns the featured image from the parent, grand-parent, etc.</p>
+<p>If no featured image has been selected for a post, page, or custom post type, this plugin will assign the first featured image found from its parent, grand-parent, great-grand-parent, etc.</p>
 
-<p>To override the inherited featured image, and manually select a different featured image, use the 'Add Media' button and the 'Set Featured Image' option.</p>
+<p>The plugin makes no permanent changes &mdash; simply deactivate the plugin to disable the automatically inherited images. ;-)</p>
 
-<p>The plugin hooks the WordPress 'get_post_metadata' filter, so featured images are assigned dynamically &mdash; no permanent changes are made &mdash; simply disable the plugin to disable inherited featured images.</p>
+<p>There are no plugin settings &mdash; simply <em>install</em> and <em>activate</em> the plugin.</p>
 
-<p>The plugin also uses the WordPress <code>wp_cache_get()</code> and <code>update_meta_cache()</code> functions for maximum performance and to fully integrate with WordPress core functionality.</p>
+<h3>Coded for Performance</h3>
 
-<p>There are no plugin settings &mdash; simply install and activate the plugin.</p>
+<p>This plugin uses the WordPress <code>wp_cache_get()</code> and <code>update_meta_cache()</code> functions for maximum performance and fully integrate with WordPress core functionality.</p>
 
 
 <h2>Installation</h2>
