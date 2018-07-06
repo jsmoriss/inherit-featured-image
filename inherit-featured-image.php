@@ -55,32 +55,32 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 			load_plugin_textdomain( 'inherit-featured-image', false, 'inherit-featured-image/languages/' );
 		}
 
-		public static function get_meta_thumbnail_id( $meta_data, $object_id, $meta_key, $single ) {
+		public static function get_meta_thumbnail_id( $meta_data, $obj_id, $meta_key, $single ) {
 
 			/**
-			 * We're only interested in the post (object) featured image.
+			 * We're only interested in the featured image (aka '_thumbnail_id').
 			 */
 			if ( $meta_key !== '_thumbnail_id' ) {
 				return $meta_data;
 			}
 
-			$meta_cache = self::get_meta_cache( $object_id, 'post' );
+			$meta_cache = self::get_meta_cache( $obj_id, 'post' );
 
 			/**
-			 * If the post (object) meta already has a featured image, then no need to check the parents.
+			 * If the meta already has a featured image, then no need to check the parents.
 			 */
 			if ( ! empty( $meta_cache[$meta_key] ) ) {
 				return $meta_data;
 			}
 
 			/**
-			 * Return the first parent featured image found. Start with the parent, then the grand-parent, etc.
+			 * Start with the parent and work our way up - return the first featured image found.
 			 */
-			foreach ( get_post_ancestors( $object_id ) as $parent_id ) {
+			foreach ( get_post_ancestors( $obj_id ) as $parent_id ) {
 
 				$meta_cache = self::get_meta_cache( $parent_id, 'post' );
 
-				if ( ! empty( $meta_cache[$meta_key] ) ) {
+				if ( ! empty( $meta_cache[$meta_key][0] ) ) {
 					if ( $single ) {
 						return maybe_unserialize( $meta_cache[$meta_key][0] );
 					} else {
@@ -92,13 +92,13 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 			return $meta_data;
 		}
 
-		private static function get_meta_cache( $object_id, $meta_type ) {
+		private static function get_meta_cache( $obj_id, $meta_type ) {
 
-			$meta_cache = wp_cache_get( $object_id, $meta_type . '_meta' );
+			$meta_cache = wp_cache_get( $obj_id, $meta_type . '_meta' );
 
 			if ( ! $meta_cache ) {
-				$meta_cache = update_meta_cache( $meta_type, array( $object_id ) );
-				$meta_cache = $meta_cache[$object_id];
+				$meta_cache = update_meta_cache( $meta_type, array( $obj_id ) );
+				$meta_cache = $meta_cache[ $obj_id ];
 			}
 
 			return $meta_cache;
