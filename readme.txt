@@ -13,19 +13,19 @@ Requires At Least: 3.8
 Tested Up To: 4.9.7
 Stable Tag: 1.1.1
 
-Inherit the featured image from the Post, Page, or Custom Post Type parent, grand-parent, etc.
+Inherit the featured image from the Post, Page, or Custom Post Type parent, grand-parent, great-grand-parent, etc.
 
 == Description ==
 
-If a featured image has not been selected for a Post, Page, or Custom Post Type, then the plugin returns the featured image from the parent, grand-parent, etc.
+If no featured image has been selected for a post, page, or custom post type, this plugin will assign the first featured image found from its parent, grand-parent, great-grand-parent, etc.
 
-To override the inherited featured image, and manually select a different featured image, use the 'Add Media' button and the 'Set Featured Image' option.
+The plugin makes no permanent changes &mdash; simply deactivate the plugin to disable the automatically inherited images. ;-)
 
-The plugin hooks the WordPress 'get_post_metadata' filter, so featured images are assigned dynamically &mdash; no permanent changes are made &mdash; simply disable the plugin to disable inherited featured images.
+There are no plugin settings &mdash; simply *install* and *activate* the plugin.
 
-The plugin also uses the WordPress `wp_cache_get()` and `update_meta_cache()` functions for maximum performance and to fully integrate with WordPress core functionality.
+<h3>Coded for Performance</h3>
 
-There are no plugin settings &mdash; simply install and activate the plugin.
+This plugin uses the WordPress `wp_cache_get()` and `update_meta_cache()` functions for maximum performance and fully integrate with WordPress core functionality.
 
 == Installation ==
 
