@@ -12,7 +12,7 @@
  * Description: Inherit the featured image from the Post, Page, or Custom Post Type parent, grand-parent, etc.
  * Requires PHP: 5.5
  * Requires At Least: 3.8
- * Tested Up To: 5.0
+ * Tested Up To: 5.1
  * Version: 1.1.1
  * 
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
