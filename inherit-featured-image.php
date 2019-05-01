@@ -69,7 +69,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 			/**
 			 * If the meta already has a featured image, then no need to check the parents.
 			 */
-			if ( ! empty( $meta_cache[$meta_key] ) ) {
+			if ( ! empty( $meta_cache[ $meta_key ] ) ) {
 				return $meta_data;
 			}
 
@@ -80,11 +80,11 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 
 				$meta_cache = self::get_meta_cache( $parent_id, 'post' );
 
-				if ( ! empty( $meta_cache[$meta_key][0] ) ) {
+				if ( ! empty( $meta_cache[ $meta_key ][ 0 ] ) ) {
 					if ( $single ) {
-						return maybe_unserialize( $meta_cache[$meta_key][0] );
+						return maybe_unserialize( $meta_cache[ $meta_key ][ 0 ] );
 					} else {
-						return array_map( 'maybe_unserialize', $meta_cache[$meta_key] );
+						return array_map( 'maybe_unserialize', $meta_cache[ $meta_key ] );
 					}
 				}
 			}
