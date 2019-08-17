@@ -9,7 +9,7 @@ Assets URI: https://jsmoriss.github.io/inherit-featured-image/assets/
 Tags: inherit, parent, featured, image
 Contributors: jsmoriss
 Requires PHP: 5.6
-Requires At Least: 3.8
+Requires At Least: 3.9
 Tested Up To: 5.2.2
 Stable Tag: 1.1.1
 
