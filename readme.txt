@@ -10,7 +10,7 @@ Tags: inherit, parent, featured, image
 Contributors: jsmoriss
 Requires PHP: 5.6
 Requires At Least: 3.9
-Tested Up To: 5.2.2
+Tested Up To: 5.2.3
 Stable Tag: 1.1.1
 
 Inherit the featured image from the Post, Page, or Custom Post Type parent, grand-parent, great-grand-parent, etc.
