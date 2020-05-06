@@ -33,7 +33,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 
         class InheritFeaturedImage {
 
-		private static $instance;
+		private static $instance = null;
 
 		public function __construct() {
 
@@ -44,7 +44,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 
 		public static function &get_instance() {
 
-			if ( ! isset( self::$instance ) ) {
+			if ( null === self::$instance ) {
 				self::$instance = new self;
 			}
 
