@@ -45,6 +45,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 		public static function &get_instance() {
 
 			if ( null === self::$instance ) {
+
 				self::$instance = new self;
 			}
 
