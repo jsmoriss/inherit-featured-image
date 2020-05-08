@@ -13,7 +13,7 @@
  * Requires PHP: 5.6
  * Requires At Least: 4.2
  * Tested Up To: 5.4.1
- * Version: 1.1.1
+ * Version: 1.2.0
  * 
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -90,6 +90,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 				$meta_cache = self::get_meta_cache( $parent_id, 'post' );
 
 				if ( ! empty( $meta_cache[ $meta_key ][ 0 ] ) ) {
+
 					if ( $single ) {
 						return maybe_unserialize( $meta_cache[ $meta_key ][ 0 ] );
 					} else {
@@ -106,7 +107,9 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 			$meta_cache = wp_cache_get( $obj_id, $meta_type . '_meta' );
 
 			if ( ! $meta_cache ) {
+
 				$meta_cache = update_meta_cache( $meta_type, array( $obj_id ) );
+
 				$meta_cache = $meta_cache[ $obj_id ];
 			}
 
