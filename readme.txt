@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 5.6
 Requires At Least: 4.2
 Tested Up To: 5.4.1
-Stable Tag: 1.1.1
+Stable Tag: 1.2.0
 
 Inherit the featured image from the Post, Page, or Custom Post Type parent, grand-parent, great-grand-parent, etc.
 
@@ -73,7 +73,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.1.1 (2018/06/28)**
+**Version 1.2.0 (2018/06/28)**
 
 * **New Features**
 	* None.
@@ -82,11 +82,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* Maintenance release - minor code-reformatting and update to the readme.
+	* Maintenance release - minor code formatting changes.
 
 == Upgrade Notice ==
 
-= 1.1.1 =
+= 1.2.0 =
 
 (2018/06/28) Maintenance release - minor code-reformatting and update to the readme.
 
