@@ -105,9 +105,19 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 
 		private static function get_meta_cache( $obj_id, $meta_type ) {
 
-			$meta_cache = wp_cache_get( $obj_id, $meta_type . '_meta' );
+			/**
+			 * WordPress stores data using a post, term, or user ID, along with a group string.
+			 *
+			 * Example: wp_cache_get( 1, 'user_meta' );
+			 *
+			 * Returns (bool|mixed) false on failure to retrieve contents or the cache contents on success.
+			 *
+			 * $found (bool) (Optional) whether the key was found in the cache (passed by reference). Disambiguates a
+			 * return of false, a storable value. Default null.
+			 */
+			$meta_cache = wp_cache_get( $obj_id, $meta_type . '_meta', $force = false, $found );
 
-			if ( ! $meta_cache ) {
+			if ( ! $found ) {
 
 				$meta_cache = update_meta_cache( $meta_type, array( $obj_id ) );
 
