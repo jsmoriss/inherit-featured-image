@@ -1,3 +1,9 @@
+
+Notice: Undefined property: Wpsso::$p in /var/www/wpadm/wordpress/wp-content/plugins/wpsso/wpsso.php on line 471
+
+Notice: Trying to get property 'debug' of non-object in /var/www/wpadm/wordpress/wp-content/plugins/wpsso/wpsso.php on line 471
+
+Notice: Trying to get property 'enabled' of non-object in /var/www/wpadm/wordpress/wp-content/plugins/wpsso/wpsso.php on line 471
 <h1>JSM&#039;s Inherit Parent Featured Image</h1>
 
 <table>
