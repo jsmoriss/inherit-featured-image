@@ -1,0 +1,35 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: JSM's Inherit Parent Featured Image 1.2.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/inherit-featured-image\n"
+"POT-Creation-Date: 2020-05-08 08:15-0700\n"
+"PO-Revision-Date: 2020-05-08 08:15-0700\n"
+"Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. Plugin Name of the plugin/theme
+msgid "JSM's Inherit Parent Featured Image"
+msgstr "JSM's Inherit Parent Featured Image"
+
+#. Plugin URI of the plugin/theme
+msgid "https://surniaulula.com/extend/plugins/inherit-featured-image/"
+msgstr "https://surniaulula.com/extend/plugins/inherit-featured-image/"
+
+#. Description of the plugin/theme
+msgid "Inherit the featured image from the Post, Page, or Custom Post Type parent, grand-parent, etc."
+msgstr "Héritez l'image \"Mise en avant\" du parent, grand-parent, etc. de l'Article, Page, ou type d'article personnalisé."
+
+#. Author of the plugin/theme
+msgid "JS Morisset"
+msgstr "JS Morisset"
+
+#. Author URI of the plugin/theme
+msgid "https://surniaulula.com/"
+msgstr "https://surniaulula.com/"
