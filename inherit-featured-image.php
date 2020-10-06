@@ -13,7 +13,7 @@
  * Requires PHP: 5.6
  * Requires At Least: 4.4
  * Tested Up To: 5.5.1
- * Version: 1.2.0
+ * Version: 1.3.0-dev.1
  * 
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -37,7 +37,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 
 		public function __construct() {
 
-			add_action( 'plugins_loaded', array( __CLASS__, 'init_textdomain' ) );
+			add_action( 'plugins_loaded', array( $this, 'init_textdomain' ) );
 
 			add_filter( 'get_post_metadata', array( __CLASS__, 'get_meta_thumbnail_id' ), 10, 4 );
 		}
@@ -52,17 +52,18 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 			return self::$instance;
 		}
 
-		public static function init_textdomain() {
+		public function init_textdomain() {
 
-			static $loaded = null;
+			static $local_cache = null;
 
-			if ( null !== $loaded ) {
-				return;
+			if ( null === $local_cache ) {
+
+				$local_cache = 'inherit-featured-image';
+
+				load_plugin_textdomain( 'inherit-featured-image', false, 'inherit-featured-image/languages/' );
 			}
 
-			$loaded = true;
-
-			load_plugin_textdomain( 'inherit-featured-image', false, 'inherit-featured-image/languages/' );
+			return $local_cache;
 		}
 
 		public static function get_meta_thumbnail_id( $meta_data, $obj_id, $meta_key, $single ) {
