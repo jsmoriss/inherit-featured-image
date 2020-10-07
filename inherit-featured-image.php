@@ -13,7 +13,7 @@
  * Requires PHP: 5.6
  * Requires At Least: 4.4
  * Tested Up To: 5.5.1
- * Version: 1.3.0-dev.1
+ * Version: 1.3.0
  * 
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -26,6 +26,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
         die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -72,6 +73,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 			 * We're only interested in the featured image (aka '_thumbnail_id').
 			 */
 			if ( $meta_key !== '_thumbnail_id' ) {
+
 				return $meta_data;
 			}
 
@@ -81,6 +83,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 			 * If the meta already has a featured image, then no need to check the parents.
 			 */
 			if ( ! empty( $meta_cache[ $meta_key ] ) ) {
+
 				return $meta_data;
 			}
 
@@ -94,10 +97,12 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 				if ( ! empty( $meta_cache[ $meta_key ][ 0 ] ) ) {
 
 					if ( $single ) {
+
 						return maybe_unserialize( $meta_cache[ $meta_key ][ 0 ] );
-					} else {
-						return array_map( 'maybe_unserialize', $meta_cache[ $meta_key ] );
+
 					}
+
+					return array_map( 'maybe_unserialize', $meta_cache[ $meta_key ] );
 				}
 			}
 
