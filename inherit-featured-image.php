@@ -55,16 +55,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 
 		public function init_textdomain() {
 
-			static $local_cache = null;
-
-			if ( null === $local_cache ) {
-
-				$local_cache = 'inherit-featured-image';
-
-				load_plugin_textdomain( 'inherit-featured-image', false, 'inherit-featured-image/languages/' );
-			}
-
-			return $local_cache;
+			load_plugin_textdomain( 'inherit-featured-image', false, 'inherit-featured-image/languages/' );
 		}
 
 		public static function get_meta_thumbnail_id( $meta_data, $obj_id, $meta_key, $single ) {
