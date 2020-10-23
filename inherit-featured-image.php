@@ -34,7 +34,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 
         class InheritFeaturedImage {
 
-		private static $instance = null;
+		private static $instance = null;	// InheritFeaturedImage class object.
 
 		public function __construct() {
 
