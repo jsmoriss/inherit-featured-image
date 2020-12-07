@@ -103,7 +103,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 		private static function get_meta_cache( $obj_id, $meta_type ) {
 
 			/**
-			 * WordPress stores data using a post, term, or user ID, along with a group string.
+			 * WordPress stores data using a post, term, or user id, along with a group string.
 			 *
 			 * Example: wp_cache_get( 1, 'user_meta' );
 			 *
