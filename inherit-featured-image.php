@@ -10,7 +10,7 @@
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: Inherit the featured image from the Post, Page, or Custom Post Type parent, grand-parent, etc.
- * Requires PHP: 5.6
+ * Requires PHP: 7.0
  * Requires At Least: 4.5
  * Tested Up To: 5.6
  * Version: 1.3.0
