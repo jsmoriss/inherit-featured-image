@@ -4,7 +4,7 @@
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM&#039;s Inherit Parent Featured Image</td></tr>
 <tr><th align="right" valign="top" nowrap>Summary</th><td>Inherit the featured image from the Post, Page, or Custom Post Type parent, grand-parent, great-grand-parent, etc.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.3.0</td></tr>
-<tr><th align="right" valign="top" nowrap>Requires PHP</th><td>5.6 or newer</td></tr>
+<tr><th align="right" valign="top" nowrap>Requires PHP</th><td>7.0 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>4.5 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To WordPress</th><td>5.6</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
