@@ -27,6 +27,10 @@ There are no plugin settings &mdash; simply *install* and *activate* the plugin.
 
 This plugin uses the WordPress `wp_cache_get()` and `update_meta_cache()` functions for maximum performance and fully integrate with WordPress core functionality.
 
+= Need a Boost to your Social and Search Ranking? =
+
+Check out [the WPSSO Core plugin](https://wordpress.org/plugins/wpsso/) and present your content at its best on social sites and in search results, no matter how webpages are shared, re-shared, messaged, posted, embedded, or crawled.
+
 == Installation ==
 
 = Automated Install =

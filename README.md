@@ -24,6 +24,10 @@
 
 <p>This plugin uses the WordPress <code>wp_cache_get()</code> and <code>update_meta_cache()</code> functions for maximum performance and fully integrate with WordPress core functionality.</p>
 
+<h4>Need a Boost to your Social and Search Ranking?</h4>
+
+<p>Check out <a href="https://wordpress.org/plugins/wpsso/">the WPSSO Core plugin</a> and present your content at its best on social sites and in search results, no matter how webpages are shared, re-shared, messaged, posted, embedded, or crawled.</p>
+
 
 <h2>Installation</h2>
 
