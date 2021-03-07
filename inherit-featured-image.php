@@ -72,7 +72,8 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 			 * We only care about the frontend. Do not show inherited image in backend editor.
 			 */
 			global $pagenow;
-			if (( $pagenow == 'post.php' ) || (get_post_type() == 'post')) {
+			if ( ( $pagenow == 'post.php' ) || ( get_post_type() == 'post' ) ) {
+
 				return $meta_data;
 			}
 
