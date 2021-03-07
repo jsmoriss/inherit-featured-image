@@ -13,7 +13,7 @@
  * Requires PHP: 7.0
  * Requires At Least: 4.5
  * Tested Up To: 5.7
- * Version: 1.3.0
+ * Version: 1.3.1
  * 
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -65,6 +65,14 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 			 */
 			if ( $meta_key !== '_thumbnail_id' ) {
 
+				return $meta_data;
+			}
+
+			/**
+			 * We only care about the frontend. Do not show inherited image in backend editor.
+			 */
+			global $pagenow;
+			if (( $pagenow == 'post.php' ) || (get_post_type() == 'post')) {
 				return $meta_data;
 			}
 
