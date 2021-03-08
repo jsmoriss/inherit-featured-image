@@ -13,7 +13,7 @@
  * Requires PHP: 7.0
  * Requires At Least: 4.5
  * Tested Up To: 5.7
- * Version: 1.3.0
+ * Version: 2.0.0
  * 
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -40,7 +40,9 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 
 			add_action( 'plugins_loaded', array( $this, 'init_textdomain' ) );
 
-			add_filter( 'get_post_metadata', array( __CLASS__, 'get_meta_thumbnail_id' ), 10, 4 );
+			add_filter( 'update_post_metadata', array( __CLASS__, 'update_post_metadata' ), 10, 5 );
+
+			add_filter( 'get_post_metadata', array( __CLASS__, 'get_post_metadata' ), 10, 4 );
 		}
 
 		public static function &get_instance() {
@@ -58,12 +60,37 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 			load_plugin_textdomain( 'inherit-featured-image', false, 'inherit-featured-image/languages/' );
 		}
 
-		public static function get_meta_thumbnail_id( $meta_data, $obj_id, $meta_key, $single ) {
+		public static function update_post_metadata( $check = null, $obj_id, $meta_key, $meta_value, $prev_value ) {
 
-			/**
-			 * We're only interested in the featured image (aka '_thumbnail_id').
-			 */
-			if ( $meta_key !== '_thumbnail_id' ) {
+			if ( '_thumbnail_id' !== $meta_key ) {
+
+				return $check;
+			}
+
+			if ( '' === $prev_value ) {	// No existing previous value.
+
+				foreach ( get_post_ancestors( $obj_id ) as $parent_id ) {
+
+					$meta_cache = self::get_meta_cache( $parent_id, 'post' );
+	
+					if ( ! empty( $meta_cache[ $meta_key ][ 0 ] ) ) {	// Parent has a meta key value.
+
+						$parent_value = maybe_unserialize( $meta_cache[ $meta_key ][ 0 ] );
+
+						if ( $meta_value == $parent_value ) {
+
+							return false;	// Do not save the meta key value.
+						}
+					}
+				}
+			}
+
+			return $check;
+		}
+
+		public static function get_post_metadata( $meta_data, $obj_id, $meta_key, $single ) {
+
+			if ( '_thumbnail_id' !== $meta_key ) {
 
 				return $meta_data;
 			}
@@ -71,7 +98,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 			$meta_cache = self::get_meta_cache( $obj_id, 'post' );
 
 			/**
-			 * If the meta already has a featured image, then no need to check the parents.
+			 * If the meta key already has a value, then no need to check the parents.
 			 */
 			if ( ! empty( $meta_cache[ $meta_key ] ) ) {
 
@@ -79,18 +106,17 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 			}
 
 			/**
-			 * Start with the parent and work our way up - return the first featured image found.
+			 * Start with the parent and work our way up - return the first value found.
 			 */
 			foreach ( get_post_ancestors( $obj_id ) as $parent_id ) {
 
 				$meta_cache = self::get_meta_cache( $parent_id, 'post' );
 
-				if ( ! empty( $meta_cache[ $meta_key ][ 0 ] ) ) {
+				if ( ! empty( $meta_cache[ $meta_key ][ 0 ] ) ) {	// Parent has a meta key value.
 
 					if ( $single ) {
 
 						return maybe_unserialize( $meta_cache[ $meta_key ][ 0 ] );
-
 					}
 
 					return array_map( 'maybe_unserialize', $meta_cache[ $meta_key ] );
