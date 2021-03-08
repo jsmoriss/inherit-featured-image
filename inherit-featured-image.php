@@ -77,7 +77,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 
 						$parent_value = maybe_unserialize( $meta_cache[ $meta_key ][ 0 ] );
 
-						if ( $meta_value == $parent_value ) {
+						if ( $meta_value == $parent_value ) {	// Allow integer to numeric string comparison.
 
 							return false;	// Do not save the meta key value.
 						}
