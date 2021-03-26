@@ -72,7 +72,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 				foreach ( get_post_ancestors( $obj_id ) as $parent_id ) {
 
 					$meta_cache = self::get_meta_cache( $parent_id, 'post' );
-	
+
 					if ( ! empty( $meta_cache[ $meta_key ][ 0 ] ) ) {	// Parent has a meta key value.
 
 						$parent_value = maybe_unserialize( $meta_cache[ $meta_key ][ 0 ] );
