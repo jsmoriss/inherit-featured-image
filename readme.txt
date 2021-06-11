@@ -19,9 +19,7 @@ Inherit the featured image from the Post, Page, or Custom Post Type parent, gran
 
 If no featured image has been selected for a post, page, or custom post type, this plugin will assign the first featured image found from its parent, grand-parent, great-grand-parent, etc.
 
-The plugin makes no permanent changes &mdash; simply deactivate the plugin to disable the automatically inherited images. ;-)
-
-There are no plugin settings &mdash; simply *install* and *activate* the plugin.
+The plugin makes no permanent changes - simply deactivate the plugin to disable the automatically inherited images. ;-)
 
 <h3>Coded for Performance</h3>
 
