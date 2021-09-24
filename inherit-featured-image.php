@@ -71,11 +71,11 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 
 				foreach ( get_post_ancestors( $obj_id ) as $parent_id ) {
 
-					$meta_cache = self::get_meta_cache( $parent_id, 'post' );
+					$metadata = self::get_meta_cache( $parent_id, 'post' );
 
-					if ( ! empty( $meta_cache[ $meta_key ][ 0 ] ) ) {	// Parent has a meta key value.
+					if ( ! empty( $metadata[ $meta_key ][ 0 ] ) ) {	// Parent has a meta key value.
 
-						$parent_value = maybe_unserialize( $meta_cache[ $meta_key ][ 0 ] );
+						$parent_value = maybe_unserialize( $metadata[ $meta_key ][ 0 ] );
 
 						if ( $meta_value == $parent_value ) {	// Allow integer to numeric string comparison.
 
@@ -95,12 +95,12 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 				return $meta_data;
 			}
 
-			$meta_cache = self::get_meta_cache( $obj_id, 'post' );
+			$metadata = self::get_meta_cache( $obj_id, 'post' );
 
 			/**
 			 * If the meta key already has a value, then no need to check the parents.
 			 */
-			if ( ! empty( $meta_cache[ $meta_key ] ) ) {
+			if ( ! empty( $metadata[ $meta_key ] ) ) {
 
 				return $meta_data;
 			}
@@ -110,16 +110,16 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 			 */
 			foreach ( get_post_ancestors( $obj_id ) as $parent_id ) {
 
-				$meta_cache = self::get_meta_cache( $parent_id, 'post' );
+				$metadata = self::get_meta_cache( $parent_id, 'post' );
 
-				if ( ! empty( $meta_cache[ $meta_key ][ 0 ] ) ) {	// Parent has a meta key value.
+				if ( ! empty( $metadata[ $meta_key ][ 0 ] ) ) {	// Parent has a meta key value.
 
 					if ( $single ) {
 
-						return maybe_unserialize( $meta_cache[ $meta_key ][ 0 ] );
+						return maybe_unserialize( $metadata[ $meta_key ][ 0 ] );
 					}
 
-					return array_map( 'maybe_unserialize', $meta_cache[ $meta_key ] );
+					return array_map( 'maybe_unserialize', $metadata[ $meta_key ] );
 				}
 			}
 
@@ -129,25 +129,34 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 		private static function get_meta_cache( $obj_id, $meta_type ) {
 
 			/**
+			 * Retrieves the cache contents from the cache by key and group.
+			 *
 			 * WordPress stores data using a post, term, or user ID, along with a group string.
 			 *
 			 * Example: wp_cache_get( 1, 'user_meta' );
 			 *
 			 * Returns (bool|mixed) false on failure to retrieve contents or the cache contents on success.
 			 *
-			 * $found (bool) (Optional) whether the key was found in the cache (passed by reference). Disambiguates a
-			 * return of false, a storable value. Default null.
+			 * $found (bool) Whether the key was found in the cache (passed by reference) - disambiguates a return of false.
 			 */
-			$meta_cache = wp_cache_get( $obj_id, $meta_type . '_meta', $force = false, $found );
+			$metadata = wp_cache_get( $obj_id, $meta_type . '_meta', $force = false, $found );
 
-			if ( ! $found ) {
+			if ( $found ) {
 
-				$meta_cache = update_meta_cache( $meta_type, array( $obj_id ) );
-
-				$meta_cache = $meta_cache[ $obj_id ];
+				return $metadata;
 			}
 
-			return $meta_cache;
+			/**
+			 * Updates the metadata cache for the specified objects.
+			 *
+			 * $meta_type (string) Type of object metadata is for. Accepts 'post', 'comment', 'term', 'user',
+			 * or any other object type with an associated meta table.  
+			 *
+			 * Returns (array|false) metadata cache for the specified objects, or false on failure.
+			 */
+			$metadata = update_meta_cache( $meta_type, array( $obj_id ) );
+
+			return $metadata[ $obj_id ];
 		}
 	}
 
