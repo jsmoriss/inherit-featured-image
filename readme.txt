@@ -25,10 +25,6 @@ The plugin makes no permanent changes - simply deactivate the plugin to disable 
 
 This plugin uses the WordPress `wp_cache_get()` and `update_meta_cache()` functions for maximum performance and fully integrate with WordPress core functionality.
 
-= Need a Boost to your Social and Search Ranking? =
-
-[WPSSO is an advanced structured data plugin for WordPress SEO and SMO](https://wordpress.org/plugins/wpsso/) that helps you rank higher and improves click through rates by presenting your content at its best in **search results** and on **social sites** - no matter how URLs are shared, reshared, messaged, posted, embedded, or crawled.
-
 == Installation ==
 
 = Automated Install =
