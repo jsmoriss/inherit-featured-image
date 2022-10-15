@@ -14,7 +14,7 @@
  * Requires At Least: 5.2
  * Tested Up To: 6.1.0
  * Version: 2.0.0
- * 
+ *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
  *      {major}         Major structural code changes and/or incompatible API changes (ie. breaking changes).
@@ -150,7 +150,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 			 * Updates the metadata cache for the specified objects.
 			 *
 			 * $meta_type (string) Type of object metadata is for. Accepts 'post', 'comment', 'term', 'user',
-			 * or any other object type with an associated meta table.  
+			 * or any other object type with an associated meta table.
 			 *
 			 * Returns (array|false) metadata cache for the specified objects, or false on failure.
 			 */
