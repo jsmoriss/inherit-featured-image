@@ -97,7 +97,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 
 			$metadata = self::get_meta_cache( $obj_id, 'post' );
 
-			/**
+			/*
 			 * If the meta key already has a value, then no need to check the parents.
 			 */
 			if ( ! empty( $metadata[ $meta_key ] ) ) {
@@ -105,7 +105,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 				return $meta_data;
 			}
 
-			/**
+			/*
 			 * Start with the parent and work our way up - return the first value found.
 			 */
 			foreach ( get_post_ancestors( $obj_id ) as $parent_id ) {
@@ -128,7 +128,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 
 		private static function get_meta_cache( $obj_id, $meta_type ) {
 
-			/**
+			/*
 			 * Retrieves the cache contents from the cache by key and group.
 			 *
 			 * WordPress stores data using a post, term, or user ID, along with a group string.
@@ -146,7 +146,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 				return $metadata;
 			}
 
-			/**
+			/*
 			 * Updates the metadata cache for the specified objects.
 			 *
 			 * $meta_type (string) Type of object metadata is for. Accepts 'post', 'comment', 'term', 'user',
