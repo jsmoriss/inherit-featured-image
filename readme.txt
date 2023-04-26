@@ -62,7 +62,7 @@ Maintenance release.
 * **Developer Notes**
 	* None.
 * **Requires At Least**
-	* PHP v7.2.
+	* PHP v7.2.5.
 	* WordPress v5.5.
 
 == Upgrade Notice ==
