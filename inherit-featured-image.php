@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name: JSM's Inherit Parent Featured Image
+ * Plugin Name: JSM Inherit Parent Featured Image
  * Text Domain: inherit-featured-image
  * Domain Path: /languages
  * Plugin URI: https://surniaulula.com/extend/plugins/inherit-featured-image/
