@@ -1,5 +1,5 @@
-=== JSM's Inherit Parent Featured Image ===
-Plugin Name: JSM's Inherit Parent Featured Image
+=== JSM Inherit Parent Featured Image ===
+Plugin Name: JSM Inherit Parent Featured Image
 Plugin Slug: inherit-featured-image
 Text Domain: inherit-featured-image
 Domain Path: /languages
