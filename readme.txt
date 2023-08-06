@@ -49,14 +49,14 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.0.0 (2021/03/08)**
+**Version 2.1.0 (2023/08/06)**
 
 Maintenance release.
 
 * **New Features**
 	* None.
 * **Improvements**
-	* Added backwards compatibility with the classic editor.
+	* Minor code formatting and standardization changes.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -67,7 +67,7 @@ Maintenance release.
 
 == Upgrade Notice ==
 
-= 2.0.0 =
+= 2.2.0 =
 
-(2021/03/08) Added backwards compatibility with the classic editor.
+(2023/08/06) Minor code formatting and standardization changes.
 
