@@ -3,7 +3,7 @@
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM Inherit Parent Featured Image</td></tr>
 <tr><th align="right" valign="top" nowrap>Summary</th><td>Inherit the featured image from the Post, Page, or Custom Post Type parent, grand-parent, great-grand-parent, etc.</td></tr>
-<tr><th align="right" valign="top" nowrap>Stable Version</th><td>2.0.0</td></tr>
+<tr><th align="right" valign="top" nowrap>Stable Version</th><td>2.1.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires PHP</th><td>7.2.34 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>5.5 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To WordPress</th><td>6.3.0</td></tr>

@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 7.2.34
 Requires At Least: 5.5
 Tested Up To: 6.3.0
-Stable Tag: 2.0.0
+Stable Tag: 2.1.0
 
 Inherit the featured image from the Post, Page, or Custom Post Type parent, grand-parent, great-grand-parent, etc.
 
@@ -67,7 +67,7 @@ Maintenance release.
 
 == Upgrade Notice ==
 
-= 2.2.0 =
+= 2.1.0 =
 
 (2023/08/06) Minor code formatting and standardization changes.
 
