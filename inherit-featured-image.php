@@ -41,7 +41,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 			add_action( 'plugins_loaded', array( $this, 'init_textdomain' ) );
 
 			add_filter( 'get_post_metadata', array( __CLASS__, 'get_post_metadata' ), 1000, 4 );
-			add_filter( 'update_post_metadata', array( __CLASS__, 'update_post_metadata' ), -1000, 5 );
+			add_filter( 'update_post_metadata', array( __CLASS__, 'update_post_metadata' ), 1000, 5 );
 		}
 
 		public static function &get_instance() {
