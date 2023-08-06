@@ -13,7 +13,7 @@
  * Requires PHP: 7.2.34
  * Requires At Least: 5.5
  * Tested Up To: 6.3.0
- * Version: 2.0.0
+ * Version: 2.1.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -40,9 +40,8 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 
 			add_action( 'plugins_loaded', array( $this, 'init_textdomain' ) );
 
-			add_filter( 'update_post_metadata', array( __CLASS__, 'update_post_metadata' ), 10, 5 );
-
-			add_filter( 'get_post_metadata', array( __CLASS__, 'get_post_metadata' ), 10, 4 );
+			add_filter( 'get_post_metadata', array( __CLASS__, 'get_post_metadata' ), 1000, 4 );
+			add_filter( 'update_post_metadata', array( __CLASS__, 'update_post_metadata' ), -1000, 5 );
 		}
 
 		public static function &get_instance() {
@@ -60,39 +59,11 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 			load_plugin_textdomain( 'inherit-featured-image', false, 'inherit-featured-image/languages/' );
 		}
 
-		public static function update_post_metadata( $check = null, $obj_id, $meta_key, $meta_value, $prev_value ) {
+		public static function get_post_metadata( $check, $obj_id, $meta_key, $single ) {
 
 			if ( '_thumbnail_id' !== $meta_key ) {
 
-				return $check;
-			}
-
-			if ( '' === $prev_value ) {	// No existing previous value.
-
-				foreach ( get_post_ancestors( $obj_id ) as $parent_id ) {
-
-					$metadata = self::get_meta_cache( $parent_id, 'post' );
-
-					if ( ! empty( $metadata[ $meta_key ][ 0 ] ) ) {	// Parent has a meta key value.
-
-						$parent_value = maybe_unserialize( $metadata[ $meta_key ][ 0 ] );
-
-						if ( $meta_value == $parent_value ) {	// Allow integer to numeric string comparison.
-
-							return false;	// Do not save the meta key value.
-						}
-					}
-				}
-			}
-
-			return $check;
-		}
-
-		public static function get_post_metadata( $meta_data, $obj_id, $meta_key, $single ) {
-
-			if ( '_thumbnail_id' !== $meta_key ) {
-
-				return $meta_data;
+				return $check;	// Null by default.
 			}
 
 			$metadata = self::get_meta_cache( $obj_id, 'post' );
@@ -102,28 +73,66 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 			 */
 			if ( ! empty( $metadata[ $meta_key ] ) ) {
 
-				return $meta_data;
+				return $check;	// Null by default.
 			}
 
 			/*
 			 * Start with the parent and work our way up - return the first value found.
 			 */
-			foreach ( get_post_ancestors( $obj_id ) as $parent_id ) {
+			$post_ancestors = get_post_ancestors( $post_id );
 
-				$metadata = self::get_meta_cache( $parent_id, 'post' );
+			if ( is_array( $post_ancestors ) ) {	// Just in case.
 
-				if ( ! empty( $metadata[ $meta_key ][ 0 ] ) ) {	// Parent has a meta key value.
+				foreach ( $post_ancestors as $parent_id ) {
 
-					if ( $single ) {
+					$metadata = self::get_meta_cache( $parent_id, 'post' );
 
-						return maybe_unserialize( $metadata[ $meta_key ][ 0 ] );
+					if ( ! empty( $metadata[ $meta_key ][ 0 ] ) ) {	// Parent has a meta key value.
+
+						if ( $single ) {
+
+							return maybe_unserialize( $metadata[ $meta_key ][ 0 ] );
+						}
+
+						return array_map( 'maybe_unserialize', $metadata[ $meta_key ] );
 					}
-
-					return array_map( 'maybe_unserialize', $metadata[ $meta_key ] );
 				}
 			}
 
-			return $meta_data;
+			return $check;	// Null by default.
+		}
+
+		public static function update_post_metadata( $check, $obj_id, $meta_key, $meta_value, $prev_value ) {
+
+			if ( '_thumbnail_id' !== $meta_key ) {
+
+				return $check;	// Null by default.
+			}
+
+			if ( '' === $prev_value ) {	// No existing previous value.
+
+				$post_ancestors = get_post_ancestors( $post_id );
+
+				if ( is_array( $post_ancestors ) ) {    // Just in case.
+
+					foreach ( $post_ancestors as $parent_id ) {
+
+						$metadata = self::get_meta_cache( $parent_id, 'post' );
+
+						if ( ! empty( $metadata[ $meta_key ][ 0 ] ) ) {	// Parent has a meta key value.
+
+							$parent_value = maybe_unserialize( $metadata[ $meta_key ][ 0 ] );
+
+							if ( $meta_value == $parent_value ) {	// Allow integer to numeric string comparison.
+
+								return false;	// Do not save the meta key value.
+							}
+						}
+					}
+				}
+			}
+
+			return $check;	// Null by default.
 		}
 
 		private static function get_meta_cache( $obj_id, $meta_type ) {
