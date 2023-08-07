@@ -49,16 +49,16 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.1.0 (2023/08/06)**
+**Version 2.1.1 (2023/08/07)**
 
 Maintenance release.
 
 * **New Features**
 	* None.
 * **Improvements**
-	* Minor code formatting and standardization changes.
-* **Bugfixes**
 	* None.
+* **Bugfixes**
+	* Fixed detection of invalid feature image ID values.
 * **Developer Notes**
 	* None.
 * **Requires At Least**
@@ -67,7 +67,7 @@ Maintenance release.
 
 == Upgrade Notice ==
 
-= 2.1.0 =
+= 2.1.1 =
 
-(2023/08/06) Minor code formatting and standardization changes.
+(2023/08/07) Fixed detection of invalid feature image ID values.
 
