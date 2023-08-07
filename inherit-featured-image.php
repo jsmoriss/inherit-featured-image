@@ -79,11 +79,11 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 			/*
 			 * Start with the parent and work our way up - return the first value found.
 			 */
-			$post_ancestors = get_post_ancestors( $post_id );
+			$ancestor_ids = get_post_ancestors( $post_id );
 
-			if ( is_array( $post_ancestors ) ) {	// Just in case.
+			if ( is_array( $ancestor_ids ) ) {	// Just in case.
 
-				foreach ( $post_ancestors as $parent_id ) {
+				foreach ( $ancestor_ids as $parent_id ) {
 
 					$metadata = self::get_meta_cache( $parent_id, 'post' );
 
@@ -111,11 +111,11 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 
 			if ( '' === $prev_value ) {	// No existing previous value.
 
-				$post_ancestors = get_post_ancestors( $post_id );
+				$ancestor_ids = get_post_ancestors( $post_id );
 
-				if ( is_array( $post_ancestors ) ) {    // Just in case.
+				if ( is_array( $ancestor_ids ) ) {    // Just in case.
 
-					foreach ( $post_ancestors as $parent_id ) {
+					foreach ( $ancestor_ids as $parent_id ) {
 
 						$metadata = self::get_meta_cache( $parent_id, 'post' );
 
