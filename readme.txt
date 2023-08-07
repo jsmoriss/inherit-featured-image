@@ -58,7 +58,7 @@ Maintenance release.
 * **Improvements**
 	* None.
 * **Bugfixes**
-	* Fixed detection of invalid feature image ID values.
+	* Fixed detection of invalid feature image ID values (ie. empty strings).
 * **Developer Notes**
 	* None.
 * **Requires At Least**
@@ -69,5 +69,5 @@ Maintenance release.
 
 = 2.1.1 =
 
-(2023/08/07) Fixed detection of invalid feature image ID values.
+(2023/08/07) Fixed detection of invalid feature image ID values (ie. empty strings).
 
