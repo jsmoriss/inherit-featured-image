@@ -71,7 +71,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 			/*
 			 * If the meta key already has a value, then no need to check the parents.
 			 */
-			if ( ! empty( $metadata[ $meta_key ] ) ) {
+			if ( ! empty( $metadata[ $meta_key ][ 0 ] ) ) {
 
 				return $check;	// Null by default.
 			}
@@ -113,7 +113,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 
 				$ancestor_ids = get_post_ancestors( $post_id );
 
-				if ( is_array( $ancestor_ids ) ) {    // Just in case.
+				if ( is_array( $ancestor_ids ) ) {	// Just in case.
 
 					foreach ( $ancestor_ids as $parent_id ) {
 
