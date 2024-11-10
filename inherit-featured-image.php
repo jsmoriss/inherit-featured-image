@@ -148,12 +148,11 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 			 *
 			 * $found (bool) Whether the key was found in the cache (passed by reference) - disambiguates a return of false.
 			 */
+			$found = null;
+
 			$metadata = wp_cache_get( $obj_id, $meta_type . '_meta', $force = false, $found );
 
-			if ( $found ) {
-
-				return $metadata;
-			}
+			if ( $found ) return $metadata;
 
 			/*
 			 * Updates the metadata cache for the specified objects.
