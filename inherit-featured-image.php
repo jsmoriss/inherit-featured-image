@@ -27,12 +27,12 @@
 
 if ( ! defined( 'ABSPATH' ) ) {
 
-        die( 'These aren\'t the droids you\'re looking for.' );
+	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
 if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 
-        class InheritFeaturedImage {
+	class InheritFeaturedImage {
 
 		private static $instance = null;	// InheritFeaturedImage class object.
 
