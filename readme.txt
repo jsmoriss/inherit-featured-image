@@ -9,7 +9,7 @@ Assets URI: https://jsmoriss.github.io/inherit-featured-image/assets/
 Tags: inherit, parent, featured, image
 Contributors: jsmoriss
 Requires PHP: 7.4.33
-Requires At Least: 5.9
+Requires At Least: 6.0
 Tested Up To: 6.9
 Stable Tag: 2.1.1
 
@@ -63,7 +63,7 @@ Maintenance release.
 	* None.
 * **Requires At Least**
 	* PHP v7.4.33.
-	* WordPress v5.9.
+	* WordPress v6.0.
 
 == Upgrade Notice ==
 
