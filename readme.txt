@@ -49,7 +49,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.1.1 (2023/08/07)**
+**Version 3.0.0 (2026/05/25)**
 
 Maintenance release.
 
@@ -58,7 +58,7 @@ Maintenance release.
 * **Improvements**
 	* None.
 * **Bugfixes**
-	* Fixed detection of invalid feature image ID values (ie. empty strings).
+	* Fixed `Undefined variable $post_id` error.
 * **Developer Notes**
 	* None.
 * **Requires At Least**
@@ -67,7 +67,7 @@ Maintenance release.
 
 == Upgrade Notice ==
 
-= 2.1.1 =
+= 3.0.0 =
 
-(2023/08/07) Fixed detection of invalid feature image ID values (ie. empty strings).
+(2026/05/25) Maintenance release. Fixed `Undefined variable $post_id` error.
 
