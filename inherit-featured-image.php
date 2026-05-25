@@ -13,7 +13,7 @@
  * Requires PHP: 7.4.33
  * Requires At Least: 6.0
  * Tested Up To: 7.0
- * Version: 2.1.1
+ * Version: 3.0.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -79,7 +79,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 			/*
 			 * Start with the parent and work our way up - return the first value found.
 			 */
-			$ancestor_ids = get_post_ancestors( $post_id );
+			$ancestor_ids = get_post_ancestors( $obj_id );
 
 			if ( is_array( $ancestor_ids ) ) {	// Just in case.
 
@@ -111,7 +111,7 @@ if ( ! class_exists( 'InheritFeaturedImage' ) ) {
 
 			if ( '' === $prev_value ) {	// No existing previous value.
 
-				$ancestor_ids = get_post_ancestors( $post_id );
+				$ancestor_ids = get_post_ancestors( $obj_id );
 
 				if ( is_array( $ancestor_ids ) ) {	// Just in case.
 
